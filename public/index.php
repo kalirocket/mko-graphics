@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="./app.css">
     <title>Mko-Circle-Graphics</title>
 </head>
-<body class="h-full w-full flex flex-col justify-center items-center font-mono bg-[#f1f1f1]">
-<div class="w-[80%] min-h-[55%] bg-yellow-600 mb-4">
-
-</div>
+<body class="h-full w-full flex flex-col items-center font-mono bg-[#f1f1f1]">
+<!--Canvas-->
+<div class="w-[80%] min-h-[55%] bg-yellow-600 mb-4 mt-10"></div>
+<!--Circle inputs-->
 <div class="w-[50%] bg-white flex flex-col items-center gap-y-4 py-4">
     <div>Create parent and child circles</div>
     <form class="form flex flex-col items-center gap-y-4">
