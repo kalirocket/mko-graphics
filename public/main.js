@@ -32,7 +32,19 @@ form.addEventListener('submit', function (e) {
 const drawSolarSystem = (circles) => {
     const center_x = canvas.width / 2;
     const center_y = canvas.height / 2;
+
+    ctx.beginPath();
     let ring_radius = 30;
+    ctx.arc(center_x, center_y, ring_radius, 0, 2 * Math.PI)
+    ctx.stroke();
+    ctx.font = '20px Arial';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('MK', center_x, center_y);
+
+
+    ring_radius += 30;
+
 
     for (const circle of circles) {
         const no_of_circles = circle[1];

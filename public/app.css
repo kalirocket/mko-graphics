@@ -550,6 +550,18 @@ video {
   height: 100%;
 }
 
+.h-\[400\] {
+  height: 400;
+}
+
+.h-\[400px\] {
+  height: 400px;
+}
+
+.h-\[400p\] {
+  height: 400p;
+}
+
 .min-h-\[55\%\] {
   min-height: 55%;
 }
@@ -572,6 +584,18 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[400\] {
+  width: 400;
+}
+
+.w-\[400x\] {
+  width: 400x;
+}
+
+.w-\[300\] {
+  width: 300;
 }
 
 .flex-row {
