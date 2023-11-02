@@ -29,6 +29,13 @@ form.addEventListener('submit', function (e) {
     e.preventDefault();
 });
 
+const getRanHexColor = () => {
+    const red = Math.floor(Math.random() * 256); // 0 to 255
+    const green = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
+
+    return `#${red.toString(16).padStart(2, '0')}${green.toString(16).padStart(2, '0')}${blue.toString(16).padStart(2, '0')}`;
+}
 const drawSolarSystem = (circles) => {
     const center_x = canvas.width / 2;
     const center_y = canvas.height / 2;
@@ -40,6 +47,7 @@ const drawSolarSystem = (circles) => {
     ctx.font = '20px Arial';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
+    ctx.fillStyle = 'black';
     ctx.fillText('MK', center_x, center_y);
 
 
@@ -66,6 +74,7 @@ const drawSolarSystem = (circles) => {
             const child_x = center_x + (ring_radius * Math.cos(angle));
             const child_y = center_y + (ring_radius * Math.sin(angle));
             ctx.beginPath();
+            ctx.fillStyle = getRanHexColor();
             ctx.arc(child_x, child_y, 10, 0, 2 * Math.PI);
             ctx.fill();
         }
