@@ -52,8 +52,17 @@ const drawSolarSystem = (circles) => {
         ctx.arc(center_x, center_y, ring_radius, 0, 2 * Math.PI);
         ctx.stroke();
 
+
+        const rand_items = 6;
+        let rand_post = [];
+        for (let i = 0; i <= 5; i++) {
+            rand_post.push((i / 5) * 2 * Math.PI);
+        }
+
+        const rand_offset = Math.floor(Math.random() * rand_post.length);
+
         for (let i = 0; i < no_of_circles; i++) {
-            const angle = (i / no_of_circles) * 2 * Math.PI;
+            const angle = ((i / no_of_circles) * 2 * Math.PI) + rand_post[rand_offset];
             const child_x = center_x + (ring_radius * Math.cos(angle));
             const child_y = center_y + (ring_radius * Math.sin(angle));
             ctx.beginPath();
