@@ -6,9 +6,10 @@ const form = document.querySelector('.form');
 const createCircleInput = (index) => {
     const parent_element = document.createElement('div');
     parent_element.classList.add('flex', 'flex-row', 'justify-start', 'items-center', 'gap-x-4');
+    const max = 10 + (index - 1) * 5;
     parent_element.innerHTML =
         `<div>Circle ${index}</div>
-        <input type="number" name="circle_${index}" id="" min="1" max="10" class="border-2 border-black w-20 p-2" required>`;
+        <input type="number" name="circle_${index}" id="" min="1" max="${max}" class="border-2 border-black w-20 p-2" required>`;
     return parent_element;
 }
 const clearCanvasWin = () => ctx.clearRect(0, 0, canvas.width, canvas.height);
