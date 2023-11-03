@@ -38,11 +38,16 @@ const getRanHexColor = () => {
     return `#${red.toString(16).padStart(2, '0')}${green.toString(16).padStart(2, '0')}${blue.toString(16).padStart(2, '0')}`;
 }
 const drawSolarSystem = (circles) => {
+    const circles_ = [];
+    for (const item of circles) {
+        circles_.push(item);
+    }
     const center_x = canvas.width / 2;
     const center_y = canvas.height / 2;
 
-    ctx.beginPath();
     let ring_radius = 30;
+    ctx.beginPath();
+
     ctx.arc(center_x, center_y, ring_radius, 0, 2 * Math.PI)
     ctx.stroke();
     ctx.font = '20px Arial';
@@ -54,8 +59,8 @@ const drawSolarSystem = (circles) => {
 
     ring_radius += 30;
 
+    for (const circle of circles_) {
 
-    for (const circle of circles) {
         const no_of_circles = circle[1];
         ctx.beginPath();
         ctx.arc(center_x, center_y, ring_radius, 0, 2 * Math.PI);
@@ -81,6 +86,13 @@ const drawSolarSystem = (circles) => {
         }
 
         ring_radius += 30;
+
+    }
+    if (ring_radius >= canvas.width / 2) {
+        canvas.width = (ring_radius * 2) + 50;
+        canvas.height = (ring_radius * 2) + 50;
+        clearCanvasWin();
+        drawSolarSystem(circles_);
     }
 }
 

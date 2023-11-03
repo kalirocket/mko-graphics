@@ -12,9 +12,9 @@
 
 <body class="h-full w-full flex flex-col items-center font-mono bg-[#f1f1f1]">
 <!--Canvas-->
-<div class="w-[80%] min-h-[55%] bg-yellow-600 mb-4 mt-10 flex justify-center items-center">
+<div class="w-[80%] bg-yellow-600 mb-4 mt-10 flex justify-center items-center">
 
-    <canvas id="solarSystem" width="400" height="400"></canvas>
+    <canvas id="solarSystem" width="300" height="300"></canvas>
 
 </div>
 <!--Circle inputs-->
